@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="MavenTest.EFORMS" parallel="false">
+  <test name="AppTest">
+    <classes>
+     <!-- <class name="MavenTest.EFORMS.EFTP95"/>   -->
+     <class name="MavenTest.EFORMS.EFTP97_Cliquer_sur_Camera"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
