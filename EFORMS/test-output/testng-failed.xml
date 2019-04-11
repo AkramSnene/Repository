@@ -7,7 +7,6 @@
         <methods>
           <include name="testUntitled"/>
           <include name="setUp"/>
-          <include name="tearDown"/>
         </methods>
       </class> <!-- MavenTest.EFORMS.EFTP97_Cliquer_sur_Camera -->
     </classes>
