@@ -1,10 +1,7 @@
-package MavenTest.EFORMS;//package <set your test package>;
-import io.appium.java_client.remote.AndroidMobileCapabilityType;
+package MavenTest.EFORMS;
+
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
-import io.appium.java_client.TouchAction;
-import java.time.Duration;
-import io.appium.java_client.remote.MobileCapabilityType;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.remote.DesiredCapabilities;
