@@ -46,6 +46,12 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
+    
+     <dependency>
+        <groupId>br.eti.kinoshita</groupId>
+        <artifactId>testlink-java-api</artifactId>
+        <version>1.9.6-1</version>
+     </dependency>
   </dependencies>
   
   <build>
