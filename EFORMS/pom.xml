@@ -47,11 +47,11 @@
       <scope>test</scope>
     </dependency>
     <!-- TestLink -->
-     <!-- <dependency>
-        <groupId>br.eti.kinoshita</groupId>
-        <artifactId>testlink-java-api</artifactId>
-        <version>1.9.17-1</version>
-     </dependency>    -->
+    <dependency>
+    <groupId>br.eti.kinoshita</groupId>
+    <artifactId>testlink-java-api</artifactId>
+    <version>1.9.17-0</version>
+	</dependency>   
      
   </dependencies>
   
