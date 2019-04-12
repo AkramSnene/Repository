@@ -40,7 +40,7 @@ public class EFTP96_Cliquer_sur_la_thematique_Stationnement {
   }
 
   @Test
-  public void testUntitled() throws TestLinkAPIException {
+  public void EFTP96() throws TestLinkAPIException {
 	  try {
       new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='password']")));
       driver.findElement(By.xpath("//*[@id='password']")).sendKeys("1340Adm");

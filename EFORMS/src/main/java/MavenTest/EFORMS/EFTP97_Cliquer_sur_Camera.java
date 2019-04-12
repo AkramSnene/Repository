@@ -1,11 +1,11 @@
 package MavenTest.EFORMS;
 
-import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
-import io.appium.java_client.TouchAction;
-import java.time.Duration;
 import io.appium.java_client.remote.MobileCapabilityType;
+import testlink.api.java.client.TestLinkAPIException;
+import testlink.api.java.client.TestLinkAPIResults;
+
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -36,7 +36,8 @@ public class EFTP97_Cliquer_sur_Camera {
   }
 
   @Test
-  public void testUntitled() {     
+  public void EFTP97()  throws TestLinkAPIException {   
+	  try {
 	  new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='password']")));
 	  driver.findElement(By.xpath("//*[@id='password']")).sendKeys("1340Adm");
       driver.findElement(By.xpath("//*[@text='OK']")).click();
@@ -53,6 +54,12 @@ public class EFTP97_Cliquer_sur_Camera {
       new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id='camera_button']")));
       driver.findElement(By.xpath("//*[@id='camera_button']")).click();
       new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id='camera_preview']")));
+      TestLinkIntegration.updateResults("Cliquer sur Camera", null, TestLinkAPIResults.TEST_PASSED);
+	  }
+	  catch (Exception e){
+	  TestLinkIntegration.updateResults("Cliquer sur Camera", e.getMessage(), TestLinkAPIResults.TEST_FAILED);
+	  System.out.println("==> TEST_FAILED  <==");
+	  }
       
   }
 

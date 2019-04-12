@@ -4,6 +4,7 @@
     <classes>
      <!-- <class name="MavenTest.EFORMS.EFTP95"/>   -->
      <class name="MavenTest.EFORMS.EFTP97_Cliquer_sur_Camera"/>
+     
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
