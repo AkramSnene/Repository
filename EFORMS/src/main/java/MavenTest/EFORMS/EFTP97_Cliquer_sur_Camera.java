@@ -18,7 +18,7 @@ import java.util.logging.Level;
 public class EFTP97_Cliquer_sur_Camera {
   private String reportDirectory = "reports";
   private String reportFormat = "xml";
-  private String testName = "Untitled";
+  private String testName = "EFTP97_Cliquer_sur_Camera";
   protected AndroidDriver<AndroidElement> driver = null;
 
   DesiredCapabilities dc = new DesiredCapabilities();
@@ -53,8 +53,10 @@ public class EFTP97_Cliquer_sur_Camera {
       driver.findElement(By.xpath("//*[@text='STATIONNEMENT']")).click();
       new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id='camera_button']")));
       driver.findElement(By.xpath("//*[@id='camera_button']")).click();
-      new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id='camera_preview']")));
+      new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@class='android.widget.FrameLayout' and ./*[@class='android.widget.LinearLayout']]")));
+      System.out.println("==> found  <==");
       TestLinkIntegration.updateResults("Cliquer sur Camera", null, TestLinkAPIResults.TEST_PASSED);
+      System.out.println("==> found 2 <==");
 	  }
 	  catch (Exception e){
 	  TestLinkIntegration.updateResults("Cliquer sur Camera", e.getMessage(), TestLinkAPIResults.TEST_FAILED);
@@ -66,5 +68,6 @@ public class EFTP97_Cliquer_sur_Camera {
   @AfterMethod
   public void tearDown() {
       driver.quit();
+      System.out.println("Report URL : " + driver.getCapabilities().getCapability("reportUrl"));
   }
 }

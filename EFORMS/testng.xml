@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
+  <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="MavenTest.EFORMS" parallel="false">
   <test name="AppTest">
     <classes>
      <!-- <class name="MavenTest.EFORMS.EFTP95"/>   -->
-     <class name="MavenTest.EFORMS.EFTP97_Cliquer_sur_Camera"/>
+     <class name="MavenTest.EFORMS.EFTP96_Cliquer_sur_la_thematique_Stationnement"/>
      
     </classes>
   </test> <!-- Test -->
