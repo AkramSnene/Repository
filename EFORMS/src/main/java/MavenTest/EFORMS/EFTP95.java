@@ -4,13 +4,10 @@ package MavenTest.EFORMS;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.remote.MobileCapabilityType;
-import testlink.api.java.client.TestLinkAPIException;
-import testlink.api.java.client.TestLinkAPIResults;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.testng.annotations.*;
 import java.net.URL;
 import static org.testng.Assert.assertEquals;
@@ -53,11 +50,11 @@ public class EFTP95 {
       assertEquals(GeneralInfo,"General Information");
       new WebDriverWait(driver, 30).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@contentDescription='Revenir en haut de la page']")));
       driver.findElement(By.xpath("//*[@contentDescription='Revenir en haut de la page']")).click();
-     // TestLinkIntegration.updateResults("Cliquer sur la thématique Stationnement", null, TestLinkAPIResults.TEST_PASSED);
+     
 	  System.out.println("==> TEST_PASSED <==");
 	  }
 	  catch (Exception e){
-	  //TestLinkIntegration.updateResults("Cliquer sur la thématique Stationnement", e.getMessage(), TestLinkAPIResults.TEST_FAILED);
+	  
 	  System.out.println("==> TEST_FAILED  <==");
 	 
 	  }
