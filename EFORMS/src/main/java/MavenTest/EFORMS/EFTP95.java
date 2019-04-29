@@ -4,6 +4,9 @@ package MavenTest.EFORMS;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.remote.MobileCapabilityType;
+import testlink.api.java.client.TestLinkAPIException;
+import testlink.api.java.client.TestLinkAPIResults;
+
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -35,7 +38,7 @@ public class EFTP95 {
   }
 
   @Test
-  public void EFTP96()  {
+  public void EFTP96() throws TestLinkAPIException  {
 	  try {
 		  new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='password']")));
 		  driver.findElement(By.xpath("//*[@id='forms_spinner']")).click();
@@ -50,11 +53,11 @@ public class EFTP95 {
       assertEquals(GeneralInfo,"General Information");
       new WebDriverWait(driver, 30).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@contentDescription='Revenir en haut de la page']")));
       driver.findElement(By.xpath("//*[@contentDescription='Revenir en haut de la page']")).click();
-     
+      TestLinkIntegration.updateResults("Cliquer sur Camera", null, TestLinkAPIResults.TEST_PASSED);
 	  System.out.println("==> TEST_PASSED <==");
 	  }
 	  catch (Exception e){
-	  
+		  TestLinkIntegration.updateResults("Cliquer sur Camera", e.getMessage(), TestLinkAPIResults.TEST_FAILED);
 	  System.out.println("==> TEST_FAILED  <==");
 	 
 	  }
