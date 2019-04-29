@@ -1,21 +1,19 @@
 package MavenTest.EFORMS;
 
-import io.appium.java_client.remote.AndroidMobileCapabilityType;
+
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.remote.MobileCapabilityType;
 import testlink.api.java.client.TestLinkAPIException;
 import testlink.api.java.client.TestLinkAPIResults;
-
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.*;
 import java.net.URL;
-
 import static org.testng.Assert.assertEquals;
-
 import java.net.MalformedURLException;
 import java.util.logging.Level;
 
@@ -42,8 +40,11 @@ public class EFTP96_Cliquer_sur_la_thematique_Stationnement {
   @Test
   public void EFTP96() throws TestLinkAPIException {
 	  try {
-      new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='password']")));
-      driver.findElement(By.xpath("//*[@id='password']")).sendKeys("1340Adm");
+		  new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='password']")));
+		  driver.findElement(By.xpath("//*[@id='forms_spinner']")).click();
+		  driver.findElement(By.xpath("//*[@text='Finky-acc']")).click();
+      
+      driver.findElement(By.xpath("//*[@id='password']")).sendKeys("123");
       driver.findElement(By.xpath("//*[@text='OK']")).click();
       new WebDriverWait(driver, 30).until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@text='STATIONNEMENT']")));
       driver.findElement(By.xpath("//*[@text='STATIONNEMENT']")).click();
@@ -58,6 +59,7 @@ public class EFTP96_Cliquer_sur_la_thematique_Stationnement {
 	  catch (Exception e){
 	  TestLinkIntegration.updateResults("Cliquer sur la thématique Stationnement", e.getMessage(), TestLinkAPIResults.TEST_FAILED);
 	  System.out.println("==> TEST_FAILED  <==");
+	 
 	  }
   }
 
