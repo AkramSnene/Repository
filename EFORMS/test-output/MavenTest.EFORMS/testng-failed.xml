@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [MavenTest.EFORMS]">
-  <test name="AppTest(failed)">
+<suite name="Failed suite [MavenTest.EFORMS]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="AppTest(failed)">
     <classes>
-      <class name="MavenTest.EFORMS.EFTP97_Cliquer_sur_Camera">
+      <class name="MavenTest.EFORMS.EFTP95">
         <methods>
-          <include name="testUntitled"/>
-          <include name="setUp"/>
           <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="EFTP96"/>
         </methods>
-      </class> <!-- MavenTest.EFORMS.EFTP97_Cliquer_sur_Camera -->
+      </class> <!-- MavenTest.EFORMS.EFTP95 -->
     </classes>
   </test> <!-- AppTest(failed) -->
 </suite> <!-- Failed suite [MavenTest.EFORMS] -->

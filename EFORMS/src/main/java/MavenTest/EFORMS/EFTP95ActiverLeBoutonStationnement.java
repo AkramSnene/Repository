@@ -8,19 +8,18 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import MavenTest.EFORMS.Conf;
 import io.appium.java_client.AppiumDriver;
 //import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import testlink.api.java.client.TestLinkAPIResults;
-
+import testlink.api.java.client.TestLinkAPIClient;
 public class EFTP95ActiverLeBoutonStationnement {
 	
 public void configuration() throws Exception {
 
-	Conf f=new Conf();
-	f.config();
+	//Conf f=new Conf();
+	//f.config();
 	DesiredCapabilities caps = new DesiredCapabilities();
 	try {
 		AppiumDriver<MobileElement> driver = new AndroidDriver<MobileElement>(new URL("http://127.0.0.1:4723/wd/hub"), caps);

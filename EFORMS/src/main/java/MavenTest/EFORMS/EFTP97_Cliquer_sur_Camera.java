@@ -5,6 +5,7 @@ import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.remote.MobileCapabilityType;
 import testlink.api.java.client.TestLinkAPIException;
 import testlink.api.java.client.TestLinkAPIResults;
+import testlink.api.java.client.TestLinkAPIClient;
 
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -19,10 +20,19 @@ public class EFTP97_Cliquer_sur_Camera {
   private String reportDirectory = "reports";
   private String reportFormat = "xml";
   private String testName = "EFTP97_Cliquer_sur_Camera";
+  
+  public static String DEVKEY="4ebd72f18419c2c137c5219c172d28bb";
+  public static String URL="http://localhost/testlink/lib/api/xmlrpc/v1/xmlrpc.php";
+
   protected AndroidDriver<AndroidElement> driver = null;
 
   DesiredCapabilities dc = new DesiredCapabilities();
   
+  public static void reportResult(String TestProject,String TestPlan,String Testcase,String Build,String Notes,String Result) throws TestLinkAPIException{
+	  TestLinkAPIClient api=new TestLinkAPIClient(DEVKEY, URL);
+	  api.reportTestCaseResult(TestProject, TestPlan, Testcase, Build, Notes, Result);
+	  }
+
   @BeforeMethod
   public void setUp() throws MalformedURLException {
 	  dc.setCapability("reportDirectory", reportDirectory);
@@ -36,7 +46,14 @@ public class EFTP97_Cliquer_sur_Camera {
   }
 
   @Test
-  public void EFTP97()  throws TestLinkAPIException {   
+  public void EFTP97()  throws TestLinkAPIException {  
+	  String testProject="Gmail";
+	  String testPlan="SampleTestPlan";
+	  String testCase="GmailLogin1";
+	  String build="SampleBuild";
+	  String notes=null;
+	  String result=null;
+
 	  try {
 	  new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='password']")));
 	  driver.findElement(By.xpath("//*[@id='password']")).sendKeys("1340Adm");
@@ -55,18 +72,27 @@ public class EFTP97_Cliquer_sur_Camera {
       driver.findElement(By.xpath("//*[@id='camera_button']")).click();
       new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@class='android.widget.FrameLayout' and ./*[@class='android.widget.LinearLayout']]")));
       System.out.println("==> found  <==");
-      TestLinkIntegration.updateResults("Cliquer sur Camera", null, TestLinkAPIResults.TEST_PASSED);
+      //TestLinkIntegration.updateResults("Cliquer sur Camera", null, TestLinkAPIResults.TEST_PASSED);
       System.out.println("==> found 2 <==");
+      
+      result= TestLinkAPIResults.TEST_PASSED;
+      notes="Executed successfully";
+
 	  }
 	  catch (Exception e){
-	  TestLinkIntegration.updateResults("Cliquer sur Camera", e.getMessage(), TestLinkAPIResults.TEST_FAILED);
+	  //TestLinkIntegration.updateResults("Cliquer sur Camera", e.getMessage(), TestLinkAPIResults.TEST_FAILED);
 	  System.out.println("==> TEST_FAILED  <==");
+	  
+	  result=TestLinkAPIResults.TEST_FAILED;
+	  notes="Execution failed";
+
 	  }
-      
+	 // a.reportResult(testProject, testPlan, testCase, build, notes, result);
   }
 
   @AfterMethod
   public void tearDown() {
+	  
       driver.quit();
       System.out.println("Report URL : " + driver.getCapabilities().getCapability("reportUrl"));
   }
