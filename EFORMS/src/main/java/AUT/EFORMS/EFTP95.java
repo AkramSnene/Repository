@@ -38,8 +38,8 @@ public class EFTP95 {
       
 		  driver.findElement(By.xpath("//*[@id='password']")).sendKeys("123");
 		  driver.findElement(By.xpath("//*[@text='OK']")).click();
-		  new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@text='Configuration']"))); //Connect 
-		  driver.findElement(By.xpath("//*[@text='Configuration']")).click();
+		  new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@text='CONFIGURATION']"))); //Connect 
+		  driver.findElement(By.xpath("//*[@text='CONFIGURATION']")).click();
 		  
 		  driver.executeScript("seetest:client.swipeWhileNotFound(\"Down\", 150, 2000, \"NATIVE\", \"//*[@id='switch_stationnement']\", 0, 1000, 7, false)");
 	      String attribute1 = driver.findElement(By.xpath("//*[@id='switch_stationnement']")).getAttribute("checked");
@@ -48,7 +48,7 @@ public class EFTP95 {
 	    	  driver.findElement(By.xpath("//*[@id='switch_stationnement']")).click();
 	      }
 	      driver.findElement(By.xpath("//*[@text='OK']")).click();
-    	  new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@text='Configuration']")));
+    	  new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@text='CONFIGURATION']")));
     	  System.out.println("==> TEST_PASSED <==");
 	  }
 	  @AfterMethod
