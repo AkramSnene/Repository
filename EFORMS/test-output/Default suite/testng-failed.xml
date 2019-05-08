@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="MavenTest.EFORMS.EFTP95">
+      <class name="AUT.EFORMS.EFTP95">
         <methods>
+          <include name="TEST95"/>
           <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="EFTP96"/>
         </methods>
-      </class> <!-- MavenTest.EFORMS.EFTP95 -->
+      </class> <!-- AUT.EFORMS.EFTP95 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -49,7 +49,7 @@ public class EFTP95 {
 	    	  driver.findElement(By.xpath("//*[@id='switch_stationnement']")).click();
 	      }
 	      driver.findElement(By.xpath("//*[@text='OK']")).click();
-    	  new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@text='CONFIGURATION']")));
+    	  new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@text='Configuration']")));
     	  System.out.println("==> TEST_PASSED <==");
 	  }
 	  @AfterMethod
