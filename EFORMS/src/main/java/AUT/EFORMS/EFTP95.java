@@ -25,9 +25,10 @@ public class EFTP95 {
 	      dc.setCapability("reportFormat", reportFormat);
 	      dc.setCapability("testName", testName);
 	      dc.setCapability(MobileCapabilityType.UDID, "W3D7N16321018979");
+	      dc.setCapability("deviceName","P8 LITE");
 		  dc.setCapability("appPackage", "com.eforms.android"); 
 		  dc.setCapability("appActivity", "com.eforms.android.ui.activity.LauncherActivity");
-	      driver = new AndroidDriver<>(new URL("http://localhost:4723/wd/hub"), dc);
+	      driver = new AndroidDriver<>(new URL("http://127.0.0.1:4723/wd/hub"), dc);
 	      driver.setLogLevel(Level.INFO);
 	  }
 	  @Test
@@ -38,8 +39,8 @@ public class EFTP95 {
       
 		  driver.findElement(By.xpath("//*[@id='password']")).sendKeys("123");
 		  driver.findElement(By.xpath("//*[@text='OK']")).click();
-		  new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@text='CONFIGURATION']"))); //Connect 
-		  driver.findElement(By.xpath("//*[@text='CONFIGURATION']")).click();
+		  new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@text='Configuration']"))); //Connect 
+		  driver.findElement(By.xpath("//*[@text='Configuration']")).click();
 		  
 		  driver.executeScript("seetest:client.swipeWhileNotFound(\"Down\", 150, 2000, \"NATIVE\", \"//*[@id='switch_stationnement']\", 0, 1000, 7, false)");
 	      String attribute1 = driver.findElement(By.xpath("//*[@id='switch_stationnement']")).getAttribute("checked");
