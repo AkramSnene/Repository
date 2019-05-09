@@ -27,6 +27,7 @@ public class EFTP104 {
 	      dc.setCapability("reportFormat", reportFormat);
 	      dc.setCapability("testName", testName);
 	      dc.setCapability(MobileCapabilityType.UDID, "W3D7N16321018979");
+	      dc.setCapability("deviceName","P8 LITE");
 		  dc.setCapability("appPackage", "com.eforms.android"); 
 		  dc.setCapability("appActivity", "com.eforms.android.ui.activity.LauncherActivity");
 	      driver = new AndroidDriver<>(new URL("http://localhost:4723/wd/hub"), dc);

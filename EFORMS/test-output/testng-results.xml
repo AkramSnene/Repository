@@ -2,25 +2,24 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-05-08T08:35:18Z" name="Default suite" finished-at="2019-05-08T08:36:24Z" duration-ms="65349">
+  <suite started-at="2019-05-09T10:29:39Z" name="Default suite" finished-at="2019-05-09T10:30:34Z" duration-ms="54910">
     <groups>
     </groups>
-    <test started-at="2019-05-08T08:35:18Z" name="Default test" finished-at="2019-05-08T08:36:24Z" duration-ms="65349">
-      <class name="AUT.EFORMS.EFTP95">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:AUT.EFORMS.EFTP95@663c9e7a]" started-at="2019-05-08T08:35:18Z" name="setUp" finished-at="2019-05-08T08:35:28Z" duration-ms="9493" status="PASS">
+    <test started-at="2019-05-09T10:29:39Z" name="Default test" finished-at="2019-05-09T10:30:34Z" duration-ms="54910">
+      <class name="AUT.EFORMS.EFTP113">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:AUT.EFORMS.EFTP113@663c9e7a]" started-at="2019-05-09T10:29:39Z" name="setUp" finished-at="2019-05-09T10:29:58Z" duration-ms="19399" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="TEST95()[pri:0, instance:AUT.EFORMS.EFTP95@663c9e7a]" started-at="2019-05-08T08:35:28Z" name="TEST95" finished-at="2019-05-08T08:36:19Z" duration-ms="51314" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
+        <test-method signature="TEST113()[pri:0, instance:AUT.EFORMS.EFTP113@663c9e7a]" started-at="2019-05-09T10:29:58Z" name="TEST113" finished-at="2019-05-09T10:30:29Z" duration-ms="31175" status="FAIL">
+          <exception class="java.lang.ClassCastException">
             <message>
-              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //*[@text='CONFIGURATION'] (tried for 10 second(s) with 500 milliseconds interval)]]>
+              <![CDATA[class io.appium.java_client.android.AndroidDriver cannot be cast to class org.openqa.selenium.interactions.HasTouchScreen (io.appium.java_client.android.AndroidDriver and org.openqa.selenium.interactions.HasTouchScreen are in unnamed module of loader 'app')]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //*[@text='CONFIGURATION'] (tried for 10 second(s) with 500 milliseconds interval)
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-at AUT.EFORMS.EFTP95.TEST95(EFTP95.java:52)
+              <![CDATA[java.lang.ClassCastException: class io.appium.java_client.android.AndroidDriver cannot be cast to class org.openqa.selenium.interactions.HasTouchScreen (io.appium.java_client.android.AndroidDriver and org.openqa.selenium.interactions.HasTouchScreen are in unnamed module of loader 'app')
+at org.openqa.selenium.interactions.touch.TouchActions.<init>(TouchActions.java:38)
+at AUT.EFORMS.EFTP113.TEST113(EFTP113.java:76)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -46,58 +45,17 @@ at org.testng.TestNG.run(TestNG.java:1017)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element (An element could not be located on the page using the given search parameters (XPATH='//*[@text='CONFIGURATION']'))  (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
-System info: host: 'DESKTOP-6BJI3SN', ip: '192.168.30.106', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.2'
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {appActivity: com.eforms.android.ui.activ..., appPackage: com.eforms.android, appiumVersion: 1.8.0, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, desired: {appActivity: com.eforms.android.ui.activ..., appPackage: com.eforms.android, deviceName: P8 LITE, platformName: Android, reportDirectory: reports, reportFormat: xml, testName: EFTP95 Activer le bouton St..., udid: W3D7N16321018979}, device.category: PHONE, device.majorVersion: 6, device.manufacture: HUAWEI, device.model: ALE-L21, device.name: ALE-L21, device.os: Android, device.screenSize: 720x1280, device.serialNumber: W3D7N16321018979, device.version: 6.0, deviceName: P8 LITE, deviceUDID: W3D7N16321018979, dontGoHomeOnQuit: false, dontStopAppOnReset: false, fullReset: false, install.only.for.update: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 300, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportUrl: C:\Users\Admin\appiumstudio..., reservationDuration: 240, takeScreenshots: true, test.type: Mobile, testName: EFTP95 Activer le bouton St..., udid: W3D7N16321018979, useKeystore: false, waitForDeviceTimeout: 120000}
-Session ID: 849f882d-e697-4618-9818-8306371cedc9
-*** Element info: {Using=xpath, value=//*[@text='CONFIGURATION']}
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
-at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
-at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:152)
-at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
-at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
-at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-... 26 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          </exception> <!-- java.lang.ClassCastException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TEST95 -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:AUT.EFORMS.EFTP95@663c9e7a]" started-at="2019-05-08T08:36:19Z" name="tearDown" finished-at="2019-05-08T08:36:24Z" duration-ms="4514" status="PASS">
+        </test-method> <!-- TEST113 -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:AUT.EFORMS.EFTP113@663c9e7a]" started-at="2019-05-09T10:30:29Z" name="tearDown" finished-at="2019-05-09T10:30:34Z" duration-ms="4310" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- AUT.EFORMS.EFTP95 -->
+      </class> <!-- AUT.EFORMS.EFTP113 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
