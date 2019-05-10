@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="AUT.EFORMS.EFTP124">
+      <class name="AUT.EFORMS.EFTP113">
         <methods>
           <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="TEST124"/>
+          <include name="TEST113"/>
         </methods>
-      </class> <!-- AUT.EFORMS.EFTP124 -->
+      </class> <!-- AUT.EFORMS.EFTP113 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

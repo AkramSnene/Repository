@@ -1,10 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?>
-  <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="AUT.EFORMS" parallel="false">
-  <test name="AppTest">
-    <classes>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Examples Test Suite" verbose="1" parallel="false" thread-count="2"
+    data-provider-thread-count="3">
+ <listeners>
+		<listener class-name="ExtentReport.Extent" />
+	</listeners>
+    <test name="Examples">
+        <classes>
+           
      <class name="AUT.EFORMS.EFTP95"/>   
-     <!-- <class name="MavenTest.EFORMS.EFTP96_Cliquer_sur_la_thematique_Stationnement"/> -->
      
     </classes>
   </test> <!-- Test -->
