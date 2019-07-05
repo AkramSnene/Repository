@@ -33,6 +33,7 @@ public class EFTP95 {
 	  }
 	  @Test
 	  public void TEST95() {
+		  driver.unlockDevice();
 		  new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='password']")));
 		  driver.findElement(By.xpath("//*[@id='forms_spinner']")).click();
 		  driver.findElement(By.xpath("//*[@text='Finky-acc']")).click();
