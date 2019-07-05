@@ -30,10 +30,10 @@ public class EFTP95 {
 		  dc.setCapability("appActivity", "com.eforms.android.ui.activity.LauncherActivity");
 	      driver = new AndroidDriver<>(new URL("http://127.0.0.1:4723/wd/hub"), dc);
 	      driver.setLogLevel(Level.INFO);
+	      driver.unlockDevice();
 	  }
 	  @Test
 	  public void TEST95() {
-		  driver.unlockDevice();
 		  new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='password']")));
 		  driver.findElement(By.xpath("//*[@id='forms_spinner']")).click();
 		  driver.findElement(By.xpath("//*[@text='Finky-acc']")).click();
