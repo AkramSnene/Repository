@@ -8,7 +8,14 @@
     <test name="Examples">
         <classes>
            
-     <class name="AUT.EFORMS.EFTP95"/>   
+     <class name="AUT.EFORMS.EFTP95"/>  
+     <class name="AUT.EFORMS.EFTP96"/>  
+     <class name="AUT.EFORMS.EFTP97"/>  
+     <class name="AUT.EFORMS.EFTP98"/>  
+     <class name="AUT.EFORMS.EFTP99"/>  
+     <class name="AUT.EFORMS.EFTP100"/>   
+     <class name="AUT.EFORMS.EFTP101"/>   
+     <class name="AUT.EFORMS.EFTP102"/>   
      
     </classes>
   </test> <!-- Test -->
